@@ -21,6 +21,9 @@ read_globals = {
 	table = {fields = {'removemulti', 'wipe'}},
 
 	-- FrameXML
+	'ArenaEnemyFramesContainer',
+	'ArenaEnemyMatchFramesContainer',
+	'ArenaEnemyPrepFramesContainer',
 	'ColorMixin',
 	'ComboFrame',
 	'CreateColor',
@@ -31,8 +34,8 @@ read_globals = {
 	'Mixin',
 	'MonkStaggerBar',
 	'NamePlateDriverFrame',
+	'PartyFrame',
 	'PetCastingBarFrame',
-	'PetCastingBarFrame_OnLoad',
 	'PetFrame',
 	'PlayerCastingBarFrame',
 	'PlayerFrame',
