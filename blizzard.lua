@@ -68,6 +68,11 @@ local function handleFrame(baseName, doNotReparent)
 		if(totFrame) then
 			totFrame:UnregisterAllEvents()
 		end
+
+		local classPowerBar = frame.classPowerBar
+		if(classPowerBar) then
+			classPowerBar:UnregisterAllEvents()
+		end
 	end
 end
 
@@ -76,17 +81,6 @@ function oUF:DisableBlizzard(unit)
 
 	if(unit == 'player') then
 		handleFrame(PlayerFrame)
-
-		-- For the damn vehicle support:
-		PlayerFrame:RegisterEvent('PLAYER_ENTERING_WORLD')
-		PlayerFrame:RegisterEvent('UNIT_ENTERING_VEHICLE')
-		PlayerFrame:RegisterEvent('UNIT_ENTERED_VEHICLE')
-		PlayerFrame:RegisterEvent('UNIT_EXITING_VEHICLE')
-		PlayerFrame:RegisterEvent('UNIT_EXITED_VEHICLE')
-
-		-- User placed frames don't animate
-		PlayerFrame:SetUserPlaced(true)
-		PlayerFrame:SetDontSavePosition(true)
 	elseif(unit == 'pet') then
 		handleFrame(PetFrame)
 	elseif(unit == 'target') then
